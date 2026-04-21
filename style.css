@@ -1,0 +1,156 @@
+/* EduTrack Pro Stylesheet */
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    transition: all 0.3s ease; 
+    background-color: #0f172a; 
+    color: white; 
+}
+
+.glass-card { 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 1.5rem; 
+    transition: all 0.3s ease; 
+}
+
+.glass-card:hover { 
+    border-color: rgba(255, 255, 255, 0.2); 
+    background: rgba(255, 255, 255, 0.08); 
+}
+
+.gradient-header { 
+    background: linear-gradient(135deg, #1e40af 0%, #7e22ce 100%); 
+}
+
+.sidebar-link.active { 
+    background: rgba(255, 255, 255, 0.15); 
+    color: white !important; 
+    border-left: 4px solid #6366f1; 
+}
+
+.sidebar-link:hover:not(.active) { 
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+.section { 
+    display: none; 
+}
+
+.section.active { 
+    display: block; 
+    animation: fadeIn 0.4s ease-out; 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.progress-container { 
+    background: rgba(255, 255, 255, 0.1); 
+    height: 8px; 
+    border-radius: 999px; 
+    overflow: hidden; 
+}
+
+.progress-fill { 
+    height: 100%; 
+    transition: width 1s cubic-bezier(0.65, 0, 0.35, 1); 
+}
+
+/* Status Badges */
+.status-badge { 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.student-card.selected { 
+    border-color: #6366f1; 
+    background: rgba(99, 102, 241, 0.1); 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { 
+    width: 6px; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+}
+
+/* Demo Toast Notification */
+#demo-toast { 
+    transition: all 0.5s ease; 
+    transform: translateY(100px); 
+    opacity: 0; 
+}
+
+#demo-toast.show { 
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+/* Loading Pulse Animation */
+.loading-pulse { 
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse { 
+    0% { opacity: 1; } 
+    50% { opacity: 0.6; } 
+    100% { opacity: 1; } 
+}
+
+/* AI Chat Assistant */
+.chat-container {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.chat-bubble.bot {
+    background: rgba(99, 102, 241, 0.1);
+    color: #e2e8f0;
+    border-bottom-left-radius: 0.25rem;
+    align-self: flex-start;
+}
+
+.chat-bubble.user {
+    background: #6366f1;
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+    align-self: flex-end;
+}
+
+/* Achievements & Badges */
+.badge-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.points-display {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
